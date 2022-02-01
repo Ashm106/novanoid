@@ -1,0 +1,37 @@
+{% extends "paragraph.html.twig" %}
+{% block content %}
+<div class="services-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-outer">
+                    {{ content.field_services_icon_one }}
+                    <div class="service-inner">
+                        <h3>{{ content.field_services_title_one }}</h3>
+                        <p>{{ content.field_services_paragraph_one }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-outer">
+                    {{ content.field_services_icon_two }}
+                    <div class="service-inner">
+                        <h3>{{ content.field_services_title_two }}</h3>
+                        <p>{{ content.field_services_paragraph_two }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-outer">
+                    {{ content.field_services_icon_three }}
+                    <div class="service-inner">
+                        <h3>{{ content.field_services_title_three }}</h3>
+                        <p>{{ content.field_services_paragraph_three }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

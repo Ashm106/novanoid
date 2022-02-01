@@ -1,0 +1,12 @@
+name: novanoid
+type: theme
+description: 'test theme'
+core_version_requirement: ^8 || ^9
+libraries: 
+  - novanoid/global-styling
+  - novanoid/global-scripts
+base theme: false
+regions: 
+  navigation: 'Navigation'
+  content: 'Content'
+  footer: 'Footer'

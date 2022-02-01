@@ -1,0 +1,10 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: {}
+      css/normalize.css: {}
+global-scripts:
+  version: 1.x
+  js: 
+    js/scripts.js: {}

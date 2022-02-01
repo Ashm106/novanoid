@@ -1,0 +1,443 @@
+// navigation
+.nav-strip {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+
+    .navbar-brand {
+        margin-left: 5em;
+        position: absolute;
+        z-index: 2;
+        color: orange;
+        margin-top: .25em;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 4px 2px 4px #000000;
+        transition: color 250ms;
+    }
+    a:hover {
+        color: orange;
+        transition: 250ms;
+    }
+    .navbar-nav {
+        margin-right: 5em;
+        margin-left: auto;
+
+        .nav-item {
+            margin: 0 .5em;
+        }
+        .nav-item .nav-link {
+            color: #fff;
+        }
+    }
+
+
+    @media(max-width: 991px) {
+        .navbar-collapse {
+            text-align: center;
+            margin: 0;
+        }
+        .navbar-nav {
+            margin: 0;
+            a {
+                display: block;
+                width: 100%;
+                border-bottom: solid #fff 2px;
+                font-size: 20px;
+                transition: border-bottom 250ms;
+                padding: .5em;
+            }
+            a:hover {
+                border-bottom: solid orange 2px;
+                transition: 250ms;
+            }
+        }
+        .navbar-toggler {
+            margin-right: 5em;
+            color: #fff;
+            margin-left: auto;
+        }
+    }
+
+}
+
+//homepage
+.banner-content {
+    flex-direction: column;
+    background: url('/sites/default/files/2022-01/jungle-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 80px;
+    h1 {
+        font-size: 60px;
+        margin: 0 1em;
+        text-transform: uppercase;
+      }
+}
+
+// services para
+.services-block {
+    margin-bottom: 60px;
+    .service-outer {
+        margin: 0 .5em;
+        display: flex;
+        flex-direction: row;
+        img {
+            width: 25px;
+            height: 25px;
+            margin: .5em 1em 0 0;
+        }
+        .service-inner {
+            text-align: left;
+            h3 {
+                font-size: 28px;
+            }
+    
+    
+        }
+    }
+}
+
+
+// blog list view
+.blog-list {
+    padding: 80px 0;
+    h4 {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    time {
+        font-size: .8em;
+        color: #65737e;
+    }
+
+    a {
+        text-decoration: none;
+        color: #48cfae;
+        border: solid #48cfae 3px;
+        padding: .2em .4em;
+    }
+    a:visited {
+        text-decoration: none;
+        color:#48cfae;
+    }
+}
+
+//img selection 
+.img-outer {
+    margin: 40px 0 0 0;
+    background: #f3f4f8;
+    padding: 50px 0 40px 0;
+    h2 {
+        margin-bottom: 30px
+    }
+    .img-selection-btn {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;
+        button {
+            border: none;
+            border-radius: 2px;
+            color: #fff;
+            background: #48cfae;
+            padding: .3em .5em;
+            margin: 0 .25em;
+        }
+    }
+    .img-inner {
+        display: flex;
+        flex-wrap: wrap;
+    
+        img {
+            width: 100%;
+            height: 300px;
+            padding: 1em;
+        }
+        .small {
+            width: 25%;
+            height: 300px;
+        }
+        .big {
+            width: 50%;
+            height: 300px;
+        }
+    
+    }
+}
+
+.selected {
+    transform: scale(1);
+    opacity: 1;
+    transition: 300ms;
+}
+.notSelected {
+    transform: scale(0.8);
+    opacity: .6;
+    transition: 300ms;
+}
+
+// blog list page & individual blog pages
+.blog-list-page {
+    padding-top: 50px;
+}
+
+//blog list page
+
+.views-view-grid:after {
+    clear: both;
+}
+
+.individ-blog {
+    background: #f3f4f8;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1.5em;
+    padding: 1em;
+    border-radius: 0 0 5em 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.views-view-grid {
+    // background: #65737e;
+    padding-top: 10vh;
+    padding-bottom: 100px;
+    .views-field-title {
+        margin-bottom: 1em;
+        a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+        }
+    }
+    .views-field-body {
+        max-width: 400px;
+        margin: 1em 0;
+    }
+    .views-field-field-image {
+        img {
+            border-radius: .25em;
+            max-width: 100%;
+            border-radius: 0 0 2em 0;
+        }
+    }
+    time {
+    }
+
+}
+
+.views-exposed-form {
+    position: absolute;
+    // top: 30vh;
+    top: calc(50vh - 230px);
+    left: 0px;
+    padding: 1em;
+    background: #f3f4f8;
+    border-radius: 0 0 5em 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    .form-item {
+        margin: 1em 0;
+    }
+    .form-submit {
+        margin-top: 1em;
+        padding: .5em;
+        color: #fff;
+        background-color: #48cfae;
+        font-weight: bold;
+        width: auto;
+        transform: scale(1);
+        transition: transform 250ms;
+        border: none;
+    }
+    .form-submit:hover {
+        transform: scale(1.1);
+        transition: transform 250ms;
+    }
+}
+
+.views-view-grid:after {
+    clear: both;
+}
+
+.views-element-container {
+    background: #f3f4f8;
+}
+
+// blog page
+.blog-page {
+    // background-color: darkgray;
+    min-height: 80vh;
+    .contextual-region {
+        position: inherit; 
+    }
+}
+
+
+// contact form
+.form-block-outer {
+    background-color: #f3f4f8;
+    padding: 120px 0;
+    margin: 80px 0 0 0;
+    text-align: center;
+
+    .blurb {
+        margin-bottom: 40px;
+    }
+
+    .form-outer {
+        .form-item-name, .form-item-email {
+            display: inline-block;
+            width: 49.5%;
+        }
+        .form-item-name {
+            padding-right: .4em;
+        }
+        .form-item-email {
+            padding-left: .4em;
+        }
+        input {
+            height: 35px;
+            font-size: 100%;
+            border: none;
+            margin: .5em 0;
+            outline: none;
+            padding: 0 0 0 .8em;
+            max-width: 100%;
+            width: 100%;
+        }
+        textarea {
+            border: none;
+            margin: .5em 0;
+            outline: none;
+            padding: .8em 0 0 .8em;
+            max-width: 100%;
+            width: 100%;
+            min-height: 200px;
+        }
+        .button {
+            padding: .5em;
+            color: #fff;
+            background-color: #48cfae;
+            font-weight: bold;
+            width: auto;
+            transform: scale(1);
+            transition: transform 250ms;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            transition: transform 250ms;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        @media(max-width: 500px) {
+            .form-item-name, .form-item-email {
+                display: block;
+                width: 100%;
+            }
+            .form-item-name {
+                padding-right: 0;
+            }
+            .form-item-email {
+                padding-left: 0;
+            }
+        }
+    }
+
+}
+.txt-shad {
+    text-shadow: 4px 2px 4px #000000;
+}
+
+.parallax-bg {
+    background: url('../../../assets/nature-bg.jpeg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    .orange {
+        color: orange;
+    }
+}
+
+// footer 
+.footer {
+   clear: both;
+    div {
+        background: #343a43;
+        padding: 30px 0px 50px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .navbar-nav {
+            text-align: center;
+        }
+    
+        .nav-bar-footer {
+            margin-right: 5em;
+        
+            .navbar-collapse {
+                display: block !important;
+            }
+            .navbar-toggler {
+                display: none;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 250ms;
+                text-shadow: 4px 2px 4px #000000;
+            }
+            .nav-item a:hover {
+                color: orange;
+                transition: 250ms;
+            }
+            a:visited {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        .navbar-brand {
+            margin-left: 5em;
+            color: orange;
+            text-decoration: none;
+        }
+}
+}
+
+.grow:hover {
+    transform: scale(1.1);
+    transition: transform 250ms;
+}
+.grow {
+    transform: scale(1);
+    transition: 250ms;
+}
+
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }

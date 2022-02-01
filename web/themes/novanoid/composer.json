@@ -1,0 +1,6 @@
+{
+    "require": {
+        "kint-php/kint": "^4.1",
+        "commerceguys/addressing": "^1.2"
+    }
+}
