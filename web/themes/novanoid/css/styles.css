@@ -1,15 +1,17 @@
 .nav-strip {
   position: absolute;
   width: 100%;
-  height: 50px;
+  height: 70px;
   z-index: 1;
+  font-size: 20px;
 }
 .nav-strip .navbar-brand {
-  margin-left: 5em;
+  margin-left: 2em;
   position: absolute;
   z-index: 2;
   color: orange;
-  margin-top: 0.25em;
+  margin-top: 0.1em;
+  font-size: 30px;
 }
 .nav-strip a {
   text-decoration: none;
@@ -22,7 +24,7 @@
   transition: 250ms;
 }
 .nav-strip .navbar-nav {
-  margin-right: 5em;
+  margin-right: 2em;
   margin-left: auto;
 }
 .nav-strip .navbar-nav .nav-item {
@@ -35,6 +37,12 @@
   .nav-strip .navbar-collapse {
     text-align: center;
     margin: 0;
+    padding: 0.5em 0 0 0;
+  }
+  .nav-strip .navbar-brand {
+    margin-left: 2em;
+    z-index: 11;
+    margin-top: 0.2em;
   }
   .nav-strip .navbar-nav {
     margin: 0;
@@ -52,9 +60,10 @@
     transition: 250ms;
   }
   .nav-strip .navbar-toggler {
-    margin-right: 5em;
+    margin-right: 2em;
     color: #fff;
     margin-left: auto;
+    z-index: 10;
   }
 }
 
@@ -98,7 +107,7 @@
 }
 
 .blog-list {
-  padding: 80px 0;
+  padding: 80px 1em;
 }
 .blog-list h4 {
   font-weight: bold;
@@ -117,6 +126,11 @@
 .blog-list a:visited {
   text-decoration: none;
   color: #48cfae;
+}
+@media (max-width: 768px) {
+  .blog-list {
+    padding: 50px 0;
+  }
 }
 
 .img-outer {
@@ -145,17 +159,36 @@
   flex-wrap: wrap;
 }
 .img-outer .img-inner img {
-  width: 100%;
-  height: 300px;
   padding: 1em;
 }
 .img-outer .img-inner .small {
-  width: 25%;
-  height: 300px;
+  min-width: 25%;
 }
 .img-outer .img-inner .big {
-  width: 50%;
+  min-width: 50%;
+}
+.img-outer .img-inner .one, .img-outer .img-inner .two, .img-outer .img-inner .three {
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+  border: solid 1em #f3f4f8;
+}
+.img-outer .img-inner .one {
+  background-image: url("../../../assets/amsterdam.png");
   height: 300px;
+}
+.img-outer .img-inner .two {
+  background-image: url("../../../assets/cleveland.png");
+  height: 300px;
+}
+.img-outer .img-inner .three {
+  background-image: url("../../../assets/mexico-city.png");
+  height: 300px;
+}
+@media (max-width: 768px) {
+  .img-outer .img-inner .small, .img-outer .img-inner .big {
+    min-width: 100%;
+  }
 }
 
 .selected {
@@ -180,27 +213,29 @@
 
 .individ-blog {
   background: #f3f4f8;
-  min-height: 350px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin: 1.5em;
+  margin: 0.3em;
   padding: 1em;
   border-radius: 0 0 5em 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .views-view-grid {
-  padding-top: 10vh;
-  padding-bottom: 100px;
-}
-.views-view-grid .views-field-title {
-  margin-bottom: 1em;
+  background: #f3f4f8;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding-top: 280px;
+  padding-bottom: 200px;
 }
 .views-view-grid .views-field-title a {
   font-size: 20px;
   text-decoration: none;
   color: #000;
+}
+.views-view-grid .views-row {
+  margin-bottom: 1em;
 }
 .views-view-grid .views-field-body {
   max-width: 400px;
@@ -211,20 +246,37 @@
   max-width: 100%;
   border-radius: 0 0 2em 0;
 }
+.views-view-grid time {
+  font-size: 0.8em;
+}
+
 .views-exposed-form {
   position: absolute;
-  top: calc(50vh - 230px);
-  left: 0px;
-  padding: 1em;
+  top: 70px;
+  left: -340px;
+  padding: 1em 1.5em;
   background: #f3f4f8;
   border-radius: 0 0 5em 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.views-exposed-form .form-title {
+  margin: 0;
+}
+.views-exposed-form .form-inner {
+  display: flex;
+  flex-direction: row;
+}
 .views-exposed-form .form-item {
-  margin: 1em 0;
+  margin: 1em 0.5em;
+}
+.views-exposed-form label {
+  margin-bottom: 0.5em;
+}
+.views-exposed-form select {
+  padding: 0 !important;
 }
 .views-exposed-form .form-submit {
-  margin-top: 1em;
+  margin-top: 4.5em;
   padding: 0.5em;
   color: #fff;
   background-color: #48cfae;
@@ -238,25 +290,50 @@
   transform: scale(1.1);
   transition: transform 250ms;
 }
+@media (max-width: 1199px) {
+  .views-exposed-form {
+    left: 0px;
+  }
+}
+
+.views-row {
+  margin-bottom: 1em;
+}
 
 .views-view-grid:after {
   clear: both;
 }
 
 .views-element-container {
-  background: #f3f4f8;
+  background: #fff;
 }
 
 .blog-page {
   min-height: 80vh;
 }
-.blog-page .contextual-region {
-  position: inherit;
+
+.single-blog-page {
+  min-height: 80vh;
+}
+.single-blog-page .outer-pad {
+  padding-top: 170px;
+}
+.single-blog-page .blog-outer {
+  background: #f3f4f8;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0 0 5em 0;
+}
+.single-blog-page .blog-outer img {
+  width: 100%;
+  border-radius: 5em 0 0 0;
+}
+.single-blog-page .blog-outer .blog-inner {
+  padding: 1em;
 }
 
 .form-block-outer {
   background-color: #f3f4f8;
-  padding: 120px 0;
+  padding: 80px 0;
   margin: 80px 0 0 0;
   text-align: center;
 }
@@ -356,7 +433,7 @@
   text-align: center;
 }
 .footer div .nav-bar-footer {
-  margin-right: 5em;
+  margin-right: 2em;
 }
 .footer div .nav-bar-footer .navbar-collapse {
   display: block !important;
@@ -379,7 +456,7 @@
   text-decoration: none;
 }
 .footer div .navbar-brand {
-  margin-left: 5em;
+  margin-left: 2em;
   color: orange;
   text-decoration: none;
 }

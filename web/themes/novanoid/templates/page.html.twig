@@ -57,19 +57,15 @@
         {{ page.navigation }}
     </div>
     <script>
-      if (window.location.href.indexOf('/home')) {
+      if ((window.location.href.indexOf("blog-list") > -1) ||  (window.location.href.indexOf("blog") > -1)) {
         let darkNav = document.querySelector('.navbar').style.cssText = "background: #343a43;";
-        console.log('test');
-      } else {
-        darkNav.style.cssText = "background: none;";
+        let darkNavMob = document.querySelector('.navbar-collapse').style.cssText = "background: #343a43;";
       }
   </script>
   </header>
 
-
-
   <main role='main'>
-    <content class="layout-content" style="position: relative;">
+    <content class="layout-content">
       {{ page.content }}
     </content>
   </main>
